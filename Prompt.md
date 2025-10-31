@@ -1,17 +1,19 @@
-# 新需求
+# New Requirement
 
-为Gin应用添加JWT Auth Middleware支持，算法为HS256，secret为`your-256-bit-secret`。要求如下：
+Add JWT Auth Middleware support for the Gin application with HS256 algorithm and secret `your-256-bit-secret`. Requirements:
 
-- 为`/api/v1/*`增加JWT验证，其他的URL放行
-- 验证失败时返回401状态码和JSON格式的错误信息
-- 增加基于username和password获取jwt的功能，生成的JWT token的payload的sub为username，过期时间为30天
-- JWT token来自于请求头的`Authorization`字段，格式为`Bearer <token>`，同时也支持x-api-key查询字段传递JWT Token
+- Add JWT verification for `/api/v1/*`, allow other URLs to pass through
+- Return 401 status code and JSON format error message when verification fails
+- Add functionality to obtain JWT based on username and password. The generated JWT token's payload sub should be username, with an expiration time of 30 days
+- JWT token comes from the `Authorization` header field in the format `Bearer <token>`, and also supports passing JWT Token through the x-api-key query parameter
 
-# 新需求
+# New Requirement
 
-请为项目增加SQLite数据支持，具体需求如下：
+Please add SQLite database support for the project. Specific requirements:
 
-- 集成SQLite数据库，确保项目可以使用SQLite进行数据存储和查询。
-- 创建users表，主要包括： ID，用户名，电子邮件，创建时间等列
-- 创建user repository，实现基本的CRUD（创建、读取、更新、删除）
-- 创建user handler，处理HTTP请求，支持用户的增删改查操作
+- Integrate SQLite database to ensure the project can use SQLite for data storage and querying.
+- Create a users table, mainly including: ID, username, email, creation time, and other columns
+- Create a user repository to implement basic CRUD (Create, Read, Update, Delete) operations
+- Create a user handler to handle HTTP requests and support user CRUD operations
+
+
